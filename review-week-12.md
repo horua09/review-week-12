@@ -1,22 +1,18 @@
 ## answer 1
-import React from "react";
-
-const message = "Welcom to React!"
-
-export function Welcome(props) {
-return <div className="welcome">{message}
-<h1>Welcome to React!</h1>
-}
+const Welcome = () => {
+  return <h1>Welcome to React!</h1>;
+};
 
 ## answer 2
 
-export function Welcome(props) {
-  return <div className="welcome">{message}
-  <p>Hello</p>
-  <p>World</p>
-  </div>;
-}
-
+const HelloWorld = () => {
+  return (
+    <>
+      <p>Hello</p>
+      <p>World</p>
+    </>
+  );
+};
 ## answer 3
 export function Welcome(props) {
   return <div className="Picture">{ProfilePictue}
@@ -50,7 +46,7 @@ import Profile from "profile";
 
 ## answer 8
 
-yup i think the code will work, and i think that it should return a bullet pointed list of apples, bananas and oranges.
+no it wont work, to work it needs to be wraped in an element or a div
 
 ## answer 9
 
@@ -76,13 +72,17 @@ export function Greeting(props) {
 }
 
 ## answer 11
+const Greeting = ({ name }) => {
+  return <P>Hello {name}</p>;
+};
 
 function App() {
-    const name = "Horua!";
   return (
+    <>
     <div className="app">
     <h1>Greetings</h1>
-    <Greeting  name={name}/>
+    <Greeting  name="name" />
+</>
   )
 }
 export default App
